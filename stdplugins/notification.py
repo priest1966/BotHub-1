@@ -2,9 +2,9 @@
 .nccreatedch
 .nolog
 .dellog
-.approvepm
+.apm
 .blockpm
-.listapprovedpms"""
+.listapms"""
 
 import asyncio
 import io
