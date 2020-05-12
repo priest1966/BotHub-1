@@ -1,7 +1,7 @@
 """Make / Download Telegram Sticker Packs without installing Third Party applications
 .copi [Optional Emoji]
 .packinfo
-.ZIP {for zip sticker pack}"""
+.zip {for zip sticker pack}"""
 
 from telethon import events
 from io import BytesIO
