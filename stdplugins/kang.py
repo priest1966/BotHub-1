@@ -44,18 +44,18 @@ async def _(event):
 
     me = borg.me
     userid = event.from_id
-    packname = f"@TeKnoways"
-    packshortname = f"TeKnoways{userid}"  # format: Uni_Borg_userid
+    packname = f"@priest1966"
+    packshortname = f"priest1966{userid}"  # format: Uni_Borg_userid
 
     is_a_s = is_it_animated_sticker(reply_message)
-    file_ext_ns_ion = "TeKnoways_Sticker.png"
+    file_ext_ns_ion = "priest_Sticker.png"
     file = await borg.download_file(reply_message.media)
     uploaded_sticker = None
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        packname = f"TeKnoways_AnimatedStickers"
-        packshortname = f"TeKnoways_Animated"  # format: Uni_Borg_userid
+        packname = f"Priest_AnimatedStickers"
+        packshortname = f"Priest_Animated"  # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
         await event.edit("Invalid message type")
         return
@@ -65,7 +65,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("⬛⬛⬛⬛⬛⬛⬛\n⬛⬛⏸️⬛⏸️⬛⬛\n⬛⬛⏸️⬛⏸️⬛⬛\n⬛⬛⏸️⬛⏸️⬛⬛\n⬛⬛⏸️⬛⏸️⬛⬛\n⬛⬛⏸️⬛⏸️⬛⬛\n⬛⬛⬛⬛⬛⬛⬛")
+    await event.edit("Copying this sticker")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -117,7 +117,7 @@ async def _(event):
             await silently_send_message(bot_conv, sticker_emoji)
             await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"[⬛⬛⬛⬛⬛⬛⬛\n⬛⬛▶️⬛⬛⬛⬛\n⬛⬛▶️▶️⬛⬛⬛\n⬛⬛▶️▶️▶️⬛⬛\n⬛⬛▶️▶️⬛⬛⬛\n⬛⬛▶️⬛⬛⬛⬛\n⬛⬛⬛⬛⬛⬛⬛](t.me/addstickers/{packshortname})")
+    await event.edit(f**R.I.P this sticker!!!**/nThis Sticker's Soul is [here](t.me/addstickers/{packshortname})")
 
 @borg.on(admin_cmd("packinfo"))
 async def _(event):
@@ -155,7 +155,7 @@ async def _(event):
                      f"**Emojis In Pack:** {' '.join(pack_emojis)}")
 
 
-@borg.on(admin_cmd("load ?(.*)"))
+@borg.on(admin_cmd("zip ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
